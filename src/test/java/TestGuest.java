@@ -47,9 +47,9 @@ public class TestGuest {
       assertEquals("Bob", guest1.getName());
     }
 
-    @Test
-    public void canCheckInToRoom(){
-        guest1.checkIn(bedroom1);
-      assertEquals(1, bedroom1.getCapacity());
-    }
+//    @Test
+//    public void canCheckInToRoom(){
+//        guest1.checkIn(bedroom1);
+//      assertEquals(1, bedroom1.getCapacity());
+//    }
 }

@@ -38,11 +38,18 @@ public class Bedroom {
         this.type = type;
     }
 
-//    public ArrayList<Guest> getGuests() {
-//        return guests;
-//    }
-//
-//    public void setGuests(ArrayList<Guest> guests) {
-//        this.guests = guests;
-//    }
+
+    public int countGuests() {
+        return this.guests.size();
+    }
+
+    public void addGuest(Guest guest) {
+        if (this.capacity > countGuests()) {
+            this.guests.add(guest);
+        }
+    }
+
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
+    }
 }

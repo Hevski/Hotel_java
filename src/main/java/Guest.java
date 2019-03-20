@@ -14,7 +14,4 @@ public class Guest {
         this.name = name;
     }
 
-    public void checkIn(Bedroom bedroom) {
-
-    }
 }
