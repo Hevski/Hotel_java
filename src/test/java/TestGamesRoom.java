@@ -52,15 +52,15 @@ public class TestGamesRoom {
     }
 
     @Test
-    public void canAddGuest(){
-        gamesRoom1.addGuest(guest1);
+    public void canCheckInGuest(){
+        gamesRoom1.checkInGuest(guest1);
         assertEquals(1, gamesRoom1.countGuests());
     }
 
     @Test
-    public void canRemoveGuest(){
-        gamesRoom1.addGuest(guest1);
-        gamesRoom1.removeGuest(guest1);
+    public void canCheckOutGuest(){
+        gamesRoom1.checkInGuest(guest1);
+        gamesRoom1.checkOutGuest(guest1);
         assertEquals(0, gamesRoom1.countGuests());
     }
 

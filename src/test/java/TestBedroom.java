@@ -63,15 +63,15 @@ public class TestBedroom {
     }
 
     @Test
-    public void canAddGuest(){
-        bedroom2.addGuest(guest1);
+    public void canCheckInGuest(){
+        bedroom2.checkInGuest(guest1);
         assertEquals(1, bedroom2.countGuests());
     }
 
     @Test
-    public void canRemoveGuest(){
-        bedroom2.addGuest(guest1);
-        bedroom2.removeGuest(guest1);
+    public void canCheckOutGuest(){
+        bedroom2.checkInGuest(guest1);
+        bedroom2.checkOutGuest(guest1);
         assertEquals(0, bedroom2.countGuests());
     }
 

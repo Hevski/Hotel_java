@@ -52,15 +52,15 @@ public class TestDiningRoom {
     }
 
     @Test
-    public void canAddGuest(){
-        diningRoom1.addGuest(guest1);
+    public void canCheckInGuest(){
+        diningRoom1.checkInGuest(guest1);
         assertEquals(1, diningRoom1.countGuests());
     }
 
     @Test
-    public void canRemoveGuest(){
-        diningRoom1.addGuest(guest1);
-        diningRoom1.removeGuest(guest1);
+    public void canCheckOutGuest(){
+        diningRoom1.checkInGuest(guest1);
+        diningRoom1.checkOutGuest(guest1);
         assertEquals(0, diningRoom1.countGuests());
     }
 
