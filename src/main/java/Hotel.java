@@ -35,23 +35,23 @@ public class Hotel {
         this.gamesRooms = gamesRooms;
     }
 
-    public Bedroom findBedroom(String roomnumber) {
+    public Bedroom findBedroom(int roomnumber) {
         Bedroom foundBedroom = null;
         for (Bedroom bedroom : this.bedRooms) {
-            if (bedroom.getRoomNumber().equals(roomnumber)) {
+            if (bedroom.getRoomNumber() == roomnumber) {
                 foundBedroom = bedroom;
             }
         }
         return foundBedroom;
     }
 
-     public void checkInGuestsToBedroom(String roomNumber, Guest guest) {
+     public void checkInGuestsToBedroom(int roomNumber, Guest guest) {
         Bedroom foundBedroom = findBedroom(roomNumber);
         foundBedroom.checkInGuest(guest);
      }
 
 
-    public void checkOutGuestFromBedroom(String roomNumber, Guest guest) {
+    public void checkOutGuestFromBedroom(int roomNumber, Guest guest) {
         Bedroom foundBedroom = findBedroom(roomNumber);
         foundBedroom.checkOutGuest(guest);
     }

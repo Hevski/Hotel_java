@@ -15,9 +15,9 @@ public class TestBedroom {
 
     @Before
     public void setup(){
-        bedroom1 = new Bedroom("4", 2, "Double");
-        bedroom2 = new Bedroom("5", 4, "Pent House");
-        bedroom3 = new Bedroom("6", 1, "Single");
+        bedroom1 = new Bedroom(2, 5, "Double");
+        bedroom2 = new Bedroom(4, 10, "Pent House");
+        bedroom3 = new Bedroom(1, 20,"Single");
         guest1 = new Guest("Heather");
         guest2 = new Guest("Angus");
         guest3 = new Guest("Monty");
@@ -36,13 +36,13 @@ public class TestBedroom {
 
     @Test
     public void hasRoomNumber(){
-        assertEquals("6", bedroom3.getRoomNumber());
+        assertEquals(20, bedroom3.getRoomNumber());
     }
 
     @Test
     public void canSetRoomNumber(){
-        bedroom1.setRoomNumber("5");
-        assertEquals("5", bedroom1.getRoomNumber());
+        bedroom1.setRoomNumber(5);
+        assertEquals(5, bedroom1.getRoomNumber());
     }
 
     @Test

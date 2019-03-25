@@ -40,9 +40,9 @@ public class TestHotel {
         diningRoom1 = new DiningRoom(12, "Mexican");
         diningRoom2 = new DiningRoom(24, "Asian");
         diningRoom3 = new DiningRoom(10, "Greek");
-        bedroom1 = new Bedroom("4", 2, "Double");
-        bedroom2 = new Bedroom("5", 4, "Pent House");
-        bedroom3 = new Bedroom("6", 1, "Single");
+        bedroom1 = new Bedroom(2, 4, "Double");
+        bedroom2 = new Bedroom(4, 5, "Pent House");
+        bedroom3 = new Bedroom(1, 6, "Single");
         bedrooms = new ArrayList<Bedroom>();
         hotel.setBedRooms(bedrooms);
         bedrooms.add(bedroom1);
@@ -73,7 +73,7 @@ public class TestHotel {
 
     @Test
     public void canFindBedroom(){
-        assertEquals(bedroom1, hotel.findBedroom("4"));
+        assertEquals(bedroom1, hotel.findBedroom(4));
     }
 
 //    @Test
@@ -83,15 +83,16 @@ public class TestHotel {
 
     @Test
     public void canCheckInGuestToBedroom(){
-        hotel.checkInGuestsToBedroom("4", guest1);
-        hotel.checkInGuestsToBedroom("4", guest2);
+        hotel.checkInGuestsToBedroom(4, guest1);
+        hotel.checkInGuestsToBedroom(4, guest2);
+        hotel.checkInGuestsToBedroom(4, guest3);
         assertEquals(2, bedroom1.countGuests());
     }
 
     @Test
     public void canCheckOutGuestFromBedroom(){
-        hotel.checkInGuestsToBedroom("4", guest1);
-        hotel.checkOutGuestFromBedroom("4", guest1);
+        hotel.checkInGuestsToBedroom(4, guest1);
+        hotel.checkOutGuestFromBedroom(4, guest1);
         assertEquals(0, bedroom1.countGuests());
     }
 
@@ -117,5 +118,4 @@ public class TestHotel {
         hotel.checkOutGuestFromGamesRoom("Play Station", guest1);
         assertEquals(0, gamesRoom1.countGuests());
     }
-
 }
